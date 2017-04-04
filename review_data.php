@@ -12,13 +12,13 @@
 		die("Connection failed: " . $conn->connect_error);
 	}
 
-	$sql = "SELECT id, isAvailable, address FROM tables";
+	$sql = "SELECT id, taken, time FROM Floor3";
 	$result = $conn->query($sql);
 
 	if ($result->num_rows > 0) {
 		// output data of each row
 		while ($row = $result->fetch_assoc()) {
-			echo "id: " . $row["id"]. " - isAvailable: " . $row["isAvailable"]. " - address: " . $row["address"]. "<br>";
+			echo "ID: " . $row["id"]. " - Is Taken: " . $row["taken"]. " - Date & Time: " . $row["time"]. "<br>";
 		}
 	} else {
 		echo "0 results";
