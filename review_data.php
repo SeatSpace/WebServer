@@ -24,4 +24,8 @@
 		echo "0 results";
 	}
 	$conn->close();
+
+	$page = $_SERVER['PHP_SELF'];
+	$sec = "5";
+	header("Refresh: $sec; url = $page");
  ?>
