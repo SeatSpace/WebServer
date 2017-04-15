@@ -14,7 +14,7 @@
 	$result = $conn->query($sql);
 
 	if ($result->num_rows > 0) {
-		while ($row = result->fetch_assoc()) {
+		while ($row = $result->fetch_assoc()) {
 			echo "ID: " . $row["id"]. ", x: " . $row["x"]. ", y: " . $row["y"]. ", width: " . $row["width"]. ", height: " . $row["height"]. "<br>";
 		}
 	} else {
