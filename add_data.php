@@ -10,5 +10,5 @@
 
 	mysql_query($SQL);
 
-	header("Location: review_data.php");s
+	header("Location: review_data.php");
  ?>
